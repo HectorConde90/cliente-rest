@@ -6,7 +6,8 @@ const getAllPhone = () => {
     restPhoneApi
         .get()
         .then(responseFromApi => {
-            document.write(JSON.stringify(responseFromApi))
+            console.log(responseFromApi.data);
+            document.write(JSON.stringify(responseFromApi.data))
         })
         .catch(err => console.log('error ', err));
 }
